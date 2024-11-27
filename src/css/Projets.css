@@ -1,0 +1,18 @@
+.project .boximg img{
+    height: auto;
+    width: 25%;
+    
+}
+
+.project .lt-box{
+    background-color: #1E1E1E;
+  }
+
+.project .lt-box img {
+    padding: 2rem;
+}
+
+
+/* .project .box>:nth-child(odd){
+    transform: translateY(10rem);
+} */
