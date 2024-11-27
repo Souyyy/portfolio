@@ -76,7 +76,7 @@ function Project() {
                             });
 
                             return (
-                                // Langage de programmation
+                                
                                 <div key={item.id || i} className="boximg  flex-col sm:flex-row lg:odd:translate-y-10 lg:even:-translate-y-20 items-center shadow p-6 rounded-xl col-span-2 md:col-span-4 lg:col-span-4 ring-1 ring-zinc-900 flex">
                                     <img src={item.images} alt={`Image de représentation du projet ${item.name}`} />
 
@@ -133,128 +133,5 @@ function Project() {
 
     );
 }
-// {/* 
-
-//             {data.map((item, i) => {
-//                 const stack = item.techno?.split(',');
-//                 const detectedSVGs = [];
-
-//                 stack?.forEach((tech) => {
-//                     if (svgMap[tech.toLowerCase()]) {
-//                         detectedSVGs.push(svgMap[tech.toLowerCase()]);
-//                     }
-//                 });
-//                 return (
-
-
-
-
-//                     i % 2 === 0 ? (
-
-//                         <div key={item.id || i} className="lt-box ring-1 ring-zinc-900 flex m-6 flex-col items-center md:items-start lg:items-center md:flex-row md:justify-center p-6 rounded-3xl lg:w-9/12">
-
-// <img src={item.images} alt={`Image de représentation du projet ${item.name}`} />
-
-// <div className="p-6 flex flex-col md:items-start items-center sm:justify-center sm:w-10/12 ">
-//     <h2 className="text-center text-2xl uppercase font-bold mb-2">{item.name}</h2>
-//     <div className="flex gap-3 mb-3">
-
-//         <h2 className="uppercase text-md font-semibold">{item.annee}</h2>
-//         {!item.duree ? '' : (<p>-</p>)}
-//         {!item.duree ? '' : (<h2 className="uppercase text-md font-semibold">{item.duree}</h2>)}
-
-
-//     </div>
-//     <h2 className="text-justify hidden md:block lg:hidden">{item.description_short}</h2>
-//     <h2 className="text-justify block md:hidden lg:block">{item.description}</h2>
-//     <div className="flex flex-wrap justify-center md:gap-12 lg:justify-start lg:gap-12 sm:flex-row gap-6 sm:gap-12 md:gap-4 mb-3 mt-3">
-//         <div className="flex flex-col items-center md:items-start">
-//             <h2 className="uppercase font-semibold ">Stack</h2>
-//             <div className="flex flex-wrap m-auto items-center justify-center ">
-
-//                 {detectedSVGs.length > 0 ? (
-//                     detectedSVGs.map((SVG, index) => (
-//                         <span key={index} className="tech-icon">
-//                             {SVG}
-//                         </span>
-//                     ))
-//                 ) : (
-//                     <p>No technologies found</p>
-//                 )}
-
-//             </div>
-//         </div>
-//         {!item.lien_de_test && !item.github ? '' : (<div className="flex flex-col items-center md:items-start">
-//             <h2 className="uppercase  font-semibold">Actions</h2>
-//             <div className="h-12 flex items-center justify-center gap-3">
-
-//                 {!item.lien_de_test ? '' : (<a href={item.lien_de_test} className="rounded-full py-1 text-sm px-2 bg-zinc-800 hover:scale-110 hover:-rotate-3">Voir le projet</a>)}
-//                 {!item.github ? '' : (<a href={item.github} className="rounded-full py-1 text-sm px-2 bg-zinc-800 hover:scale-110 hover:-rotate-3">Voir le code</a>)}
-
-//             </div>
-//         </div>)}
-
-//     </div>
-// </div>
-//                         </div>
-
-//                     ) : (
-//                         // lg:w-9/12 mt-12 mb-12 flex md:justify-end flex flex-col items-center  lg:items-center md:items-start md:flex-row md:justify-center p-6  
-//                         <div key={item.id || i} className="flex justify-center md:justify-end   ">
-//                             <div className="lt-box relative m-12 p-6 ring-1 rounded-3xl ring-zinc-900 justify-center flex lg:justify-end lg:w-9/12 w-full">
-// <div className="  flex justify-center flex-col items-center justify-center   md:justify-end md:flex-row w-full">
-//     <img className="block md:hidden lg:hidden" src={item.images} alt={`Image de représentation du projet ${item.name}`} />
-//     <div className="p-6 flex flex-col md:items-end items-center sm:justify-center sm:w-10/12 ">
-//         <h2 className="text-center text-2xl uppercase font-bold mb-2">{item.name}</h2>
-//         <div className="flex gap-3 mb-3">
-//             <h2 className="uppercase text-md font-semibold">{item.annee}</h2>
-//             {!item.duree ? '' : (<p>-</p>)}
-//             {!item.duree ? '' : (<h2 className="uppercase text-md font-semibold">{item.duree}</h2>)}
-//         </div>
-//         <h2 className="text-justify hidden md:block lg:hidden">{item.description_short}</h2>
-//         <h2 className="text-justify block md:hidden lg:block">{item.description}</h2>
-//         <div className="flex md:flex-row-reverse flex-wrap justify-center md:gap-12 lg:justify-start lg:gap-12 sm:flex-row gap-6 sm:gap-12 md:gap-4 mb-3 mt-3">
-//             <div className="flex flex-col items-center md:items-start ">
-//                 <h2 className="uppercase font-semibold ">Stack</h2>
-//                 <div className="flex flex-wrap m-auto items-center justify-center ">
-
-//                     {detectedSVGs.length > 0 ? (
-//                         detectedSVGs.map((SVG, index) => (
-//                             <span key={index} className="tech-icon">
-//                                 {SVG}
-//                             </span>
-//                         ))
-//                     ) : (
-//                         <p>No technologies found</p>
-//                     )}
-
-//                 </div>
-//             </div>
-//             {!item.lien_de_test && !item.github ? '' : (<div className="flex flex-col items-center md: md:items-start">
-//                 <h2 className="uppercase  font-semibold">Actions</h2>
-//                 <div className="h-12 flex items-center justify-center gap-3">
-//                     {!item.lien_de_test ? '' : (<a href={item.lien_de_test} className="rounded-full py-1 text-sm px-2 bg-zinc-800 hover:scale-110 hover:-rotate-3">Voir le projet</a>)}
-//                     {!item.github ? '' : (<a href={item.github} className="rounded-full py-1 text-sm px-2 bg-zinc-800 hover:scale-110 hover:-rotate-3">Voir le code</a>)}
-
-//                 </div>
-//             </div>)}
-//         </div>
-//     </div>
-//     <img className="hidden md:block lg:block" src={item.images} alt={`Image de représentation du projet ${item.name}`} />
-// </div>
-//                             </div>
-//                         </div>
-//                     )
-
-
-//                 );
-
-//             })}
-//  */}
-
-
-//         </section >
-//     )
-// }
 
 export default Project
